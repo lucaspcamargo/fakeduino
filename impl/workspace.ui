@@ -17,6 +17,9 @@
    <iconset>
     <normaloff>../res/icon_256.png</normaloff>../res/icon_256.png</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{ background-color: &quot;#233&quot;; }</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
