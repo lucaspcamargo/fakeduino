@@ -2,7 +2,7 @@
 
 Code-compatible (yet incomplete) implementation of Arduino API for testing ahd debugging sketches on the desktop
 
-!(Screenshot)[screenshot.png]
+![Screenshot](./screenshot.png)
 
 A Qt aaplication that allows for the joint compilation of arduino sketches, to be tested on the desktop.
 
