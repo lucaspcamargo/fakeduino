@@ -47,6 +47,9 @@ Fakeduino::Fakeduino()
     d->mainLoop = new QTimer();
 
     eepromPrepare();
+
+
+    d->wspc->showStatus("fakeduino ready");
 }
 
 Fakeduino::~Fakeduino()

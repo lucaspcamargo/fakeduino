@@ -22,7 +22,7 @@ void SerialInterface::begin( int baud )
 
     for(auto pi : ports)
     {
-        if(pi.isNull() || pi.isBusy())
+        if(pi.isNull() || pi.isBusy() || pi.portName().startsWith("ttyS"))
             continue;
 
         fprintf(stderr, "Serial port found: %s\n", pi.portName().toStdString().c_str());

@@ -39,14 +39,14 @@ void tone( int pin, int freq, int dur )
 {
     (void) pin;
     char cmd[1024];
-    snprintf(cmd, 1024, "padsp signalgen -s 22000 -16 -A 25 -t %dm  square %d", dur, freq);
+    snprintf(cmd, 1024, "beep -d %d -f %d", dur, freq);
     system(cmd);
 }
 
 void noTone( int pin )
 {
     (void) pin;
-    system("killall -9 signalgen");
+    system("killall -9 beep");
 }
 
 SerialInterface Serial;

@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QMap>
 #include <QQueue>
+#include <QMouseEvent>
 
 namespace Ui {
 class LiquidCrystalImpl;
@@ -26,6 +27,11 @@ public:
 
     void keyPressEvent(QKeyEvent *event) override;
     void keyReleaseEvent(QKeyEvent *event) override;
+    void mousePressEvent(QMouseEvent *event) override
+    {
+        setFocus(Qt::MouseFocusReason);
+        event->accept();
+    };
 
 private:
     void updateScreen();

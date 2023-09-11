@@ -16,6 +16,7 @@ public:
     ~Workspace();
 
     void showGadget( QWidget * qw );
+    void showStatus( QString status );
 
     Ui::Workspace *ui;
 private:

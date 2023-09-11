@@ -17,5 +17,12 @@ Workspace::~Workspace()
 
 void Workspace::showGadget(QWidget *qw)
 {
-    ui->mdiArea->addSubWindow(qw)->show();
+    auto sw = ui->mdiArea->addSubWindow(qw);
+    sw->show();
+    sw->setFocus(Qt::OtherFocusReason);
+}
+
+void Workspace::showStatus(QString status)
+{
+    ui->statusbar->showMessage(status, 5000);
 }

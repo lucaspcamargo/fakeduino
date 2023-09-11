@@ -19,6 +19,8 @@ LiquidCrystalImpl::LiquidCrystalImpl(QWidget *parent) :
     substTable[3] = QChar{u'⏰'};
     substTable[4] = QChar{u'⛭'};
     substTable[5] = QChar{u'⚬'};
+    substTable[0b01111110] = QChar{'<'};
+    substTable[0b01111111] = QChar{'>'};
 }
 
 LiquidCrystalImpl::~LiquidCrystalImpl()
@@ -90,6 +92,8 @@ void LiquidCrystalImpl::updateScreen()
     all.chop(1); // remove last \n
 
     ui->label->setText(all);
+    if(parentWidget())parentWidget()->updateGeometry();
+
     QApplication::processEvents();
 }
 

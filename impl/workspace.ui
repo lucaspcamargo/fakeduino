@@ -44,7 +44,11 @@ background-position: center center;
     </item>
    </layout>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">color: #eee;</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

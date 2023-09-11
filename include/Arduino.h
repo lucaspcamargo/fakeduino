@@ -14,6 +14,9 @@ typedef uint8_t byte;
 typedef void (*voidfunct_t)();
 
 void init();
+void setup(); // declaration, definition required from sketch
+void loop();  // declaration, definition required from sketch
+
 void fakeduino_loop(voidfunct_t);
 
 unsigned long millis();
